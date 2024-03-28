@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@font-face {
+  font-family:"AlphaCentauri" ;
+  src: url(../scss/components/Alphacentauri-MVY4p.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family:"AlphaCentauri" ;
+    list-style: none;
+    box-sizing: border-box;
+    background: #000;
+  }
+  
+  nav {
+    position: fixed;
+    z-index: 100;
+    height: 8vh;
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+  }
+  
+  .logo {
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  
+  nav .nav-links ul {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  nav .nav-links ul li {
+    padding: 0 4px;
+    list-style: none;
+  }
+  
+  nav .nav-links ul li img {
+    transform: scale(0.45);
+  }
+  
+  section {
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .bg img {
+    width: 110vw;
+    height: 110vh;
+    filter: brightness(0.6);
+  }
+  
+  .rock1 {
+    position: absolute !important;
+    left: 10vw !important;
+    top: 20vh !important;
+  }
+  
+  .rock1 img {
+    width: 40%;
+    filter: brightness(0.5);
+  }
+  
+  .text h1 {
+    font-family: "AlphaCentauri" !important;
+    font-size: 5vw;
+    color: #fff;
+    letter-spacing: 20px;
+    position: absolute;
+    top: 35vh;
+    left: 34vw;
+  }
+  
+  .earth img {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 34vw;
+    top: 25vh;
+    z-index: 1;
+    filter: brightness(0.7);
+  }
+  
+  .mid {
+    left: -150px !important;
+    bottom: -100px !important;
+    top: unset !important;
+  }
+  
+  .mid img {
+    width: 100%;
+    z-index: 2;
+    left: -20px;
+    top: 20vh !important;
+    filter: brightness(0.8);
+  }
+  
+  .fore {
+    right: -50px !important;
+    bottom: -200px !important;
+    top: 0px !important;
+    left: unset !important;
+  }
+  
+  .fore img {
+    width: 400px;
+    height: 110vh;
+    z-index: 3;
+    filter: brightness(0.5);
+  }
+  
+.rockbg1{
+    position: absolute;
+    transform: scale(0.2);
+    filter: brightness(0.2);
+    top: 20vh;
+    left: 0;
+    z-index: 1;   
+}
+
+#sectiontwo{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.planets{
+  display: none;
+  position: absolute;
+  width: 80%;
+  height: 500px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.planets div{
+  height: 50%;
+}
+.planets div h1{
+  font-size: 40px;
+  font-family:"AlphaCentauri" ;
+  font-weight: 400;
+  font-style: normal;
+ margin: 0;
+ position: absolute;
+ top: 100px;
+}
+.planets div span{
+  position: absolute;
+  font-size: 80px;
+  top: 90px;
+  color: #1A191A;
+  font-family: "Arial";
+  font-weight: bold;
+  left: 210px;
+}
+.planets div p{
+  margin-top: 100px;
+  font-family: "arial";
+  line-height: 30px;
+  transform: translateX(-30px);
+}
+.planets figure{
+  width: 30%;
+  height: 100%;
+}
+
+.Mercury figure{
+  background: url(../imgs/mercury.png) center center no-repeat ;
+}
+
+.Venus figure{
+  background: url(../imgs/venus.png) center center no-repeat ;
+  background-size: 150%;
+}
+.Venus div span{
+  left: 200px;
+} 
+
+.Mars figure{
+  background: url(../imgs/mars.png) center center no-repeat ;
+  background-size: 150%;
+}
+.jupiter figure{
+  background: url(../imgs/jupiter.png) center center no-repeat ;
+  background-size: 120%;
+}
+.jupiter div span{
+  left: 200px;
+} 
+.Saturn figure{
+  background: url(../imgs/saturn.png) center center no-repeat ;
+  background-size: 100%;
+}
+.Saturn div span {
+  left: 200px;
+}
+.Uranus figure{
+  background: url(../imgs/uranus.png) center center no-repeat ;
+  background-size: 120%;
+}
+.Neptune figure{
+  background: url(../imgs/neptune.png) center center no-repeat ;
+  background-size: 150%;
+}
+.Neptune div span, .Uranus div span{
+  left: 200px;
+} 
+.menu-planets{
+  width: 100%;
+  height: 30px;
+}
+
+.menu-planets  ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+}
+.menu-planets  ul li{
+  list-style: none;
+  padding: 0px 50px;
+  cursor: pointer;
+  color:rgb(200, 200, 200);
+  font-family:"Arial" ;
+}
+.menu-planets  ul li:hover{
+  transition: all .2s;
+  color: #fff;
+  font-weight: 400;
+}
+#sectiontwo .animation{
+  display: flex;
+}
+#sectiontwo .animation figure{
+  animation-name: ani-planets;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+}
+#sectiontwo .animation span{
+  animation-name: ani-span;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+}
+#sectiontwo .animation div p{
+  animation-name: ani-p;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+
+}
+/* #sectiontwo .animation h1{
+  animation-name: ani-h1;
+  animation-duration: 0.5s;
+  animation-delay: 0.3s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+} */
+@keyframes ani-planets{
+  0%{
+    transform: rotateZ(10deg);
+  }
+  100%{
+    transform: rotatex(0deg);
+  }
+}
+@keyframes ani-span{
+  0%{
+    left: 230px;
+
+  }
+  100%{
+    left: 200px;
+   
+  }
+}
+@keyframes ani-h1{
+  0%{
+   top: 10px;
+
+  }
+  100%{
+   top: auto;
+   
+  }
+}
+@keyframes ani-p{
+  0%{
+    transform: translateX(-30px);
+ 
+   }
+   100%{
+    transform: translateX(0px);
+    
+   }
+}
+.menu-click{
+  color: white !important;
+}
